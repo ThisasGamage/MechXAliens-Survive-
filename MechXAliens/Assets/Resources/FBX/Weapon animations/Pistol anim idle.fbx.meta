@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a19676c419252bb49978fe28e529936f
+guid: e93ad3e500b01bc4c806c15c5c732fd2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,9 +33,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Idle
-      takeName: Armature|Idle
-      internalID: -8945691123924629249
+      name: Psitol|Idle
+      takeName: Psitol|Idle
+      internalID: -4310776105724477434
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
@@ -124,8 +124,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f5c7d8dc695647c43a78cecd0209df4a,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b2dd4809be0283841afc345f620093aa, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1

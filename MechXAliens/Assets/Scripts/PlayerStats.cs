@@ -22,4 +22,12 @@ public class PlayerStats : CharacterStats
         base.CheckHealth();
         hud.UpdateHealth(health, maxHealth);
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(10);
+        }
+    }
 }

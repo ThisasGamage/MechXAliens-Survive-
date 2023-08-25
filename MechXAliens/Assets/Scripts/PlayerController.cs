@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isCharacterGrounded = false;
     private Vector3 velocity = Vector3.zero;
 
-    [Header("Animations")]
     private Animator anim;
 
 
@@ -34,7 +33,7 @@ public class PlayerController : MonoBehaviour
         HandleIsGrounded();
         HandleJumping();
         HandleGravity();
-        
+
 
         HandleRunning();
         HandleMovement();
@@ -67,17 +66,17 @@ public class PlayerController : MonoBehaviour
 
     private void HandleAnimations()
     {
-        if(moveDirection == Vector3.zero) 
+        if (moveDirection == Vector3.zero)
         {
-            anim.SetFloat("Speed", 0);
+            anim.SetFloat("speed", 0, 0.2f, Time.deltaTime);
         }
-        else if(moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
+        else if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetFloat("Speed", 0.5f);
+            anim.SetFloat("speed", 0.5f, 0.2f, Time.deltaTime);
         }
-        else if(moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
+        else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetFloat("Speed", 1f);
+            anim.SetFloat("speed", 1f, 0.2f, Time.deltaTime);
         }
     }
 
@@ -86,7 +85,7 @@ public class PlayerController : MonoBehaviour
         isCharacterGrounded = Physics.CheckSphere(transform.position, groundDistance);
     }
 
-    private void HandleJumping() 
+    private void HandleJumping()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isCharacterGrounded)
         {
