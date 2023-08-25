@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29842047908c0574d814e91d0abbee2c, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  name: Pistol
+  description: LOL a Pistol
+  icon: {fileID: 21300000, guid: 57cd07451abc3fb488c4d3d67984dd76, type: 3}
+  prefab: {fileID: 2057133945813306488, guid: cb9ced2f6899a1d48a911297f3543a16, type: 3}
+  magazineSize: 12
+  magazineCount: 24
+  range: 75
+  weaponType: 0
+  weaponStyle: 1
