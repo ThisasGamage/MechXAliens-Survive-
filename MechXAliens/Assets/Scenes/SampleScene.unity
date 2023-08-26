@@ -777,6 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentlyEquippedWeapon: 2
   currentWeaponObject: {fileID: 0}
+  currentWeaponBarrel: {fileID: 0}
   WeaponHolderR: {fileID: 750528766}
   defaultWeapon: {fileID: 11400000, guid: b12a5238bf0f88541a83894d9afc29fb, type: 2}
 --- !u!114 &943645750
@@ -1650,7 +1651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1547555804}
   magazineSizeText: {fileID: 258490067}
-  magazineCountText: {fileID: 1828631382}
+  storedAmmoText: {fileID: 0}
 --- !u!114 &1932251633
 MonoBehaviour:
   m_ObjectHideFlags: 0

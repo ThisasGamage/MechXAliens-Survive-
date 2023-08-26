@@ -23,6 +23,11 @@ public class AnimationEventManager : MonoBehaviour
         manager.currentWeaponBarrel = manager.currentWeaponObject.transform.GetChild(0);
     }
 
+    public void StartReload()
+    {
+
+    }
+
     public void GetReferences()
     {
         inventory = GetComponentInParent<Inventory>();

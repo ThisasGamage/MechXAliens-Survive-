@@ -16,8 +16,11 @@ MonoBehaviour:
   description: LOL a Pistol
   icon: {fileID: 21300000, guid: 57cd07451abc3fb488c4d3d67984dd76, type: 3}
   prefab: {fileID: 2057133945813306488, guid: cb9ced2f6899a1d48a911297f3543a16, type: 3}
-  magazineSize: 12
+  muzzleFlashParticles: {fileID: 7595652680787131170, guid: 724c4d1d3ac4c514587bf42a9db25093, type: 3}
+  magazineSize: 6
+  storedAmmo: 36
   magazineCount: 24
+  fireRate: 1
   range: 75
   weaponType: 0
   weaponStyle: 1
