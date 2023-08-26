@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour
 {
-    public int currentlyEquippedWeapon;
+    public int currentlyEquippedWeapon = 1;
     public GameObject currentWeaponObject = null;
+    public Transform currentWeaponBarrel = null;
 
     public Transform WeaponHolderR = null;
     private Animator anim;
