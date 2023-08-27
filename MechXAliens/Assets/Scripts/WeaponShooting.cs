@@ -18,6 +18,8 @@ public class WeaponShooting : MonoBehaviour
     [SerializeField] private bool primaryMagazineIsEmpty = false;
     [SerializeField] private bool secondaryMagazineIsEmpty = false;
 
+    [SerializeField] private GameObject bloodPS = null;
+
     private Camera cam;
     private Inventory inventory;
     private EquipmentManager manager;
@@ -53,6 +55,14 @@ public class WeaponShooting : MonoBehaviour
         if (Physics.Raycast(ray, out hit, currentWeaponRange))
         {
             Debug.Log(hit.transform.name);
+            if(hit.transform.tag == "Enemy")
+            {
+                CharacterStats enemyStats = hit.transform.GetComponent<CharacterStats>();
+                enemyStats.TakeDamage(currentWeapon.damage);
+
+                //Spawn Particles
+                SpawnBloodParticles(hit.point, hit.normal);
+            }
         }
 
         Instantiate(currentWeapon.muzzleFlashParticles, manager.currentWeaponBarrel);
@@ -223,6 +233,11 @@ public class WeaponShooting : MonoBehaviour
             secondaryCurrentAmmo = weapon.magazineSize;
             secondaryCurrentAmmoStorage = weapon.storedAmmo;
         }
+    }
+
+    private void SpawnBloodParticles(Vector3 position, Vector3 normal)
+    {
+        Instantiate(bloodPS, position, Quaternion.FromToRotation(Vector3.up, normal));
     }
 
     private void GetReferences()

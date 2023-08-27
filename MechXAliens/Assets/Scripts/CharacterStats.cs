@@ -28,9 +28,14 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         isDead = true;
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
     }
 
     public void SetHealthTo(int healthToSetTo)
@@ -51,7 +56,7 @@ public class CharacterStats : MonoBehaviour
         SetHealthTo(healthAfterDamage);
     }
 
-    public void InitVariable()
+    public virtual void InitVariable()
     {
         maxHealth = 100;
         SetHealthTo(maxHealth);
