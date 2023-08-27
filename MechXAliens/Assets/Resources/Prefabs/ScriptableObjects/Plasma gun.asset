@@ -18,7 +18,7 @@ MonoBehaviour:
   prefab: {fileID: 2743910265165384463, guid: 04241850a6dd86040887c1f6e860750f, type: 3}
   muzzleFlashParticles: {fileID: 7293105925326874852, guid: b638580f718c2784cbed06cc1a504bf7, type: 3}
   magazineSize: 30
-  storedAmmo: 0
+  storedAmmo: 240
   magazineCount: 240
   fireRate: 0.5
   range: 100

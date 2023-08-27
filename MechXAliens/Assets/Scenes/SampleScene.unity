@@ -792,6 +792,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6841881bce706d4bb00f5c32f9f58b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShoot: 0
+  canReload: 1
+  primaryCurrentAmmo: 0
+  primaryCurrentAmmoStorage: 0
+  secondaryCurrentAmmo: 0
+  secondaryCurrentAmmoStorage: 0
+  primaryMagazineIsEmpty: 0
+  secondaryMagazineIsEmpty: 0
 --- !u!1 &953887865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0de893747f44b0b4889e660e1025c6b8, type: 3}
@@ -1495,7 +1503,7 @@ GameObject:
   - component: {fileID: 1828631383}
   - component: {fileID: 1828631382}
   m_Layer: 5
-  m_Name: MagazineCountText
+  m_Name: storedAmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,7 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1547555804}
   magazineSizeText: {fileID: 258490067}
-  storedAmmoText: {fileID: 0}
+  storedAmmoText: {fileID: 1828631382}
 --- !u!114 &1932251633
 MonoBehaviour:
   m_ObjectHideFlags: 0
