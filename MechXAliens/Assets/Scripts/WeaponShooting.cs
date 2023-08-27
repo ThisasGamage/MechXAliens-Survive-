@@ -24,6 +24,7 @@ public class WeaponShooting : MonoBehaviour
     private Inventory inventory;
     private EquipmentManager manager;
     private PlayerHUD hud;
+    private PlayerStats stats;
 
     private void Start()
     {
@@ -34,14 +35,17 @@ public class WeaponShooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if(!stats.IsDead())
         {
-            Shoot();
-        }
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                Shoot();
+            }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Reload(manager.currentlyEquippedWeapon);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload(manager.currentlyEquippedWeapon);
+            }
         }
     }
 
@@ -246,5 +250,6 @@ public class WeaponShooting : MonoBehaviour
         inventory = GetComponent<Inventory>();
         manager = GetComponent<EquipmentManager>();
         hud = GetComponent<PlayerHUD>();
+        stats = GetComponent<PlayerStats>();
     }
 }
