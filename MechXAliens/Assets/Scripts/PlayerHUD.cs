@@ -5,8 +5,17 @@ using UnityEngine.UI;
 
 public class PlayerHUD : MonoBehaviour
 {
+    public static PlayerHUD instance = null;
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     [SerializeField] private ProgressBar healthbar;
     [SerializeField] private WeaponUI weaponUI;
+    [SerializeField] private Score scoreUI;
 
     public void UpdateHealth( int currentHealth, int maxHealth)
     {
@@ -21,5 +30,10 @@ public class PlayerHUD : MonoBehaviour
     public void UpdateWeaponAmmoUI(int currentAmmo, int storedAmmo) 
     {
         weaponUI.UpdateAmmoUI(currentAmmo, storedAmmo);
+    }
+
+    public void UpdateScoreAmount()
+    {
+        scoreUI.AddToScore();
     }
 }

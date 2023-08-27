@@ -38,12 +38,12 @@ public class CameraController : MonoBehaviour
             UnlockCursor();
     }
 
-    private void LockCursor()
+    public void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void UnlockCursor()
+    public void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
     }

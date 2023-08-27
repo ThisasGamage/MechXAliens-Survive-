@@ -22,7 +22,9 @@ public class EnemyStats : CharacterStats
     public override void Die()
     {
         base.Die();
+        PlayerHUD.instance.UpdateScoreAmount();
         Destroy(gameObject);
+        
     }
 
     public override void InitVariable()
