@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3147546025016778202}
   - component: {fileID: -154960139650675698}
   m_Layer: 0
-  m_Name: Enemy 1
+  m_Name: Enemy 4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -138,9 +138,9 @@ MonoBehaviour:
   health: 0
   maxHealth: 0
   isDead: 0
-  initMaxHealth: 40
-  initialDamage: 15
-  initialAttackSpeed: 2
+  initMaxHealth: 50
+  initialDamage: 20
+  initialAttackSpeed: 4
   initialCanAttack: 1
   damage: 0
   attackSpeed: 0

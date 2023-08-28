@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : CharacterStats
 {
+
     private PlayerHUD hud;
     private UIManager ui;
 

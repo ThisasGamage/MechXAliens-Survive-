@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
+    [SerializeField] protected int initialHealth = 0;
+    [SerializeField] protected int initialMaxHealth = 0;
+
     [SerializeField] protected int health;
     [SerializeField] protected int maxHealth;
 
@@ -63,8 +66,8 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void InitVariable()
     {
-        maxHealth = 100;
-        SetHealthTo(maxHealth);
+        maxHealth = initialMaxHealth;
+        SetHealthTo(initialHealth);
         isDead = false;
     }
 }

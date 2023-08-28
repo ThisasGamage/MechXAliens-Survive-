@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStats
 {
+    [SerializeField] private int initMaxHealth = 0;
+    [SerializeField] private int initialDamage = 0;
+    [SerializeField] private float initialAttackSpeed = 0;
+    [SerializeField] private bool initialCanAttack = true;
+
     [SerializeField] private int damage;
     public float attackSpeed;
 
@@ -29,19 +34,12 @@ public class EnemyStats : CharacterStats
 
     public override void InitVariable()
     {
-        maxHealth = 25;
+        maxHealth = initMaxHealth;
         SetHealthTo(maxHealth);
         isDead = false;
 
-        damage = 10;
-        attackSpeed = 1.5f;
+        damage = initialDamage;
+        attackSpeed = initialAttackSpeed;
         canAttack = true;
-    }
-
-    public void IncreaseStats(int waveNumber)
-    {
-        damage += waveNumber * 5;
-        maxHealth += waveNumber * 10;
-        SetHealthTo(maxHealth);
     }
 }

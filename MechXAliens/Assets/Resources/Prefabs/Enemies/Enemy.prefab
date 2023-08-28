@@ -133,9 +133,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2401af2efccc04b92ab23f272ae456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialHealth: 100
+  initialMaxHealth: 10
   health: 10
   maxHealth: 10
   isDead: 0
+  initMaxHealth: 25
+  initialDamage: 10
+  initialAttackSpeed: 1.5
+  initialCanAttack: 1
   damage: 10
   attackSpeed: 0
   canAttack: 0
