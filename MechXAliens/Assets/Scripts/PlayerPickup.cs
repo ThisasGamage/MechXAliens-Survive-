@@ -9,6 +9,9 @@ public class PlayerPickup : MonoBehaviour
 
     private Camera cam;
     private Inventory inventory;
+    private PlayerStats stats;
+    private WeaponShooting shooting;
+    private EquipmentManager equipment;
 
     private void Start()
     {
@@ -26,8 +29,27 @@ public class PlayerPickup : MonoBehaviour
             if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
             {
                 Debug.Log("Hit:" + hit.transform.name);
-                Weapon newItem = hit.transform.GetComponent<ItemObject>().item as Weapon;
-                inventory.AddItem(newItem);
+                if(hit.transform.GetComponent<ItemObject>().item as Weapon)
+                {
+                    Weapon newItem = hit.transform.GetComponent<ItemObject>().item as Weapon;
+                    inventory.AddItem(newItem);
+                }
+                else
+                {
+                    Consumable newItem = hit.transform.GetComponent<ItemObject>().item as Consumable;
+                    if(newItem.type == ConsumbleType.Medkit)
+                    {
+                        stats.Heal(stats.GetMaxHealth());
+                    }
+                    else
+                    {
+                        if (inventory.GetItem(0) != null)
+                            shooting.AddAmmo(0, inventory.GetItem(0).magazineSize, inventory.GetItem(0).storedAmmo);
+                        if (inventory.GetItem(1) != null)
+                            shooting.AddAmmo(1, inventory.GetItem(1).magazineSize, inventory.GetItem(1).storedAmmo);
+                    }
+                }
+
                 Destroy(hit.transform.gameObject);
             }
         }
@@ -37,5 +59,8 @@ public class PlayerPickup : MonoBehaviour
     {
         cam = GetComponentInChildren<Camera>();
         inventory = GetComponent<Inventory>();
+        stats = GetComponent<PlayerStats>();
+        shooting = GetComponent<WeaponShooting>();
+        equipment = GetComponent<EquipmentManager>();
     }
 }

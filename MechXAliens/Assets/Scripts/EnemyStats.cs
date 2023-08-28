@@ -37,4 +37,11 @@ public class EnemyStats : CharacterStats
         attackSpeed = 1.5f;
         canAttack = true;
     }
+
+    public void IncreaseStats(int waveNumber)
+    {
+        damage += waveNumber * 5;
+        maxHealth += waveNumber * 10;
+        SetHealthTo(maxHealth);
+    }
 }
