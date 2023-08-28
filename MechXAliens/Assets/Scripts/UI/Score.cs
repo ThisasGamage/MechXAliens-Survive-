@@ -22,7 +22,7 @@ public class Score : MonoBehaviour
 
     public void AddToScore()
     {
-        currentScore += scoreAmountOnKill;
-        scoreText.text = scoreAmountOnKill.ToString();
+        currentScore = currentScore + scoreAmountOnKill;
+        scoreText.text = currentScore.ToString();
     }
 }
